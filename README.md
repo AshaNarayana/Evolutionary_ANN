@@ -7,18 +7,17 @@ Asha Hosakote Narayana Swamy (asha.hosakote@estudiantat.upc.edu)
 ## Exercise Summary
 
 Creating a full method for training an ANN as an alternate method to backprop-based techniques.
-<br />
-<b>REQUIREMENTS:</b>
+
+<b>Requirements:</b>
 1. MLP or RBF network, one hidden layer
 2. Synthetic data
 3. One problem
 4. One kind of ANN
 5. One validation set
 
-<br />
-<b>GOAL:</b> Compare GA/Evo Strategies against derivative methods (or all three)
+<b>Goal:</b> Compare GA/Evo Strategies against derivative methods (or all three)
 
-## Tasks TO DO:
+## Tasks:
 * Marina:
   * Do ANN class with Evolution Strategies (check resources)
   * Write 1.Introduction + 4.Evolutionary Implementation
@@ -28,7 +27,6 @@ Creating a full method for training an ANN as an alternate method to backprop-ba
   * Turn syntheticData.py into a class -> Create datasets into datasets directory (.csv)
   * Do ANN class (check resources)
   * Write 2.Synthetic Data + 4.ANN Implementation
-
 
 ## Resources 
 
