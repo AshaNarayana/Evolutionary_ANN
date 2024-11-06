@@ -1,33 +1,57 @@
+from datetime import datetime
+from pathlib import Path
+import pandas as pd
 import numpy as np
+from enum import Enum
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
-import matplotlib.pyplot as plt
 
 # Set random seed for reproducibility
 np.random.seed(42)
 
-# Parameters
-n_samples = 1000  # Total number of samples
-n_features = 1    # Number of features
-noise_level = 10  # Amount of noise (hyperparameter)
+# Define datasets directory
+DATASETS_DIRECTORY = Path(__file__).parent.joinpath('datasets').resolve()
 
-# Generate synthetic regression data
-X, y = make_regression(n_samples=n_samples, n_features=n_features, noise=noise_level)
+class SyntheticData(Enum):
+    NUMBER_OF_SAMPLES = 1000
+    NUMBER_OF_FEATURES = 4
+    NOISE_LEVEL = 10
 
-# Split the data into training, validation, and testing sets
-# We can remove validation if not needed
-X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=42)  # 70% train, 30% temp
-X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=42)  # 15% val, 15% test
+    @staticmethod
+    def generate_synthetic_data():
+        """
+        Generate synthetic regression data, split into training and testing sets, and save to a CSV file.
+        """
+        # Generate synthetic regression data
+        X_FEATURES, y = make_regression(
+            n_samples=SyntheticData.NUMBER_OF_SAMPLES.value,
+            n_features=SyntheticData.NUMBER_OF_FEATURES.value,
+            noise=SyntheticData.NOISE_LEVEL.value
+        )
 
-# Checking the sizes of the datasets
-print(f"Training set size: {X_train.shape[0]}")
-print(f"Validation set size: {X_val.shape[0]}")
-print(f"Testing set size: {X_test.shape[0]}")
+        # Split the data into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(
+            X_FEATURES, y, test_size=0.3, random_state=42
+        )
 
-# Visualize the synthetic data
-plt.scatter(X, y, color='blue', label='Synthetic Data')
-plt.title('Synthetic Regression Data')
-plt.xlabel('Feature')
-plt.ylabel('Target')
-plt.legend()
-plt.show()
+        # Create DataFrame for saving
+        train_df = pd.DataFrame (X_train, columns=[f'feature_{i}' for i in
+                                                   range (1, SyntheticData.NUMBER_OF_FEATURES.value + 1)])
+
+        train_df['label'] = y_train
+        test_df = pd.DataFrame (X_test, columns=[f'feature_{i}' for i in
+                                                   range (1, SyntheticData.NUMBER_OF_FEATURES.value + 1)])
+
+        test_df['label'] = y_test
+
+        # Save training and testing sets to CSV files
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        if not DATASETS_DIRECTORY.exists ():
+            DATASETS_DIRECTORY.mkdir ()
+        train_df.to_csv(DATASETS_DIRECTORY.joinpath(f"train_data_{timestamp}.csv"), index=False)
+        test_df.to_csv(DATASETS_DIRECTORY.joinpath(f"test_data_{timestamp}.csv"), index=False)
+
+
+# Main function to run the code
+if __name__ == "__main__":
+    SyntheticData.generate_synthetic_data()
