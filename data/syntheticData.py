@@ -38,8 +38,8 @@ class SyntheticDataGenerator:
         # Scale target labels to the desired range
         scaler_y = MinMaxScaler (feature_range=target_range)
         y = scaler_y.fit_transform (y.reshape (-1, 1)).flatten ()
-        X = np.round (X, 2)
-        y = np.round (y, 2)
+        X = np.round (X, 1)
+        y = np.round (y, 1)
         return X, y
 
     def split_data(self, X: np.ndarray, y: np.ndarray, training_size: float = 0.5) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:

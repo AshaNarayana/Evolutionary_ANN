@@ -1,7 +1,6 @@
 from pathlib import Path
 
 import numpy as np
-import pickle
 
 import pandas as pd
 np.set_printoptions(suppress=True)
@@ -9,6 +8,18 @@ DATA_SET_PATH = Path(__file__).parent.parent.joinpath("data").joinpath("datasets
 def sigmoid(inpt):
     """Sigmoid activation function."""
     return 1.0 / (1 + np.exp (-inpt))
+
+
+"""
+______________________________________________________________
+TODO : learning rate should be in range of 0.01 to 0.1 to find best value
+2. test for both activation functions
+3. maybe we could reduce training data to save the time
+4. HL_neurons value could be between 150 to 200. Unless required or else we can leave it
+To be discussed
+______________________________________________________________
+"""
+
 
 
 def relu(inpt):
@@ -94,8 +105,8 @@ HL_output_weights = np.random.uniform (low=-0.1, high=0.1, size=(HL_neurons, out
 weights = [input_HL_weights, HL_output_weights]
 
 # Train the network
-weights = train_network (num_iterations=10, weights=weights, data_inputs=train_data, data_outputs=data_outputs,
-                         learning_rate=0.04, activation="relu")
+weights = train_network (num_iterations=100, weights=weights, data_inputs=train_data, data_outputs=data_outputs,
+                         learning_rate=0.02, activation="relu")
 
 
 # Make predictions
@@ -106,7 +117,7 @@ test_data = pd.read_csv(test_data_file_path)
 test_label_file_path = DATA_SET_PATH.joinpath("y_test.csv")
 
 test_label = pd.read_csv(test_label_file_path)
-predictions = predict_outputs (weights, test_data)
+predictions = predict_outputs (weights, test_data, "sigmoid")
 # Evaluate performance
 
 
