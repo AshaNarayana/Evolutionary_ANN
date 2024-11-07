@@ -33,7 +33,8 @@ Creating a full method for training an ANN as an alternate method to backprop-ba
 ### About Evolutionary Algorithms + ANN
 https://towardsdatascience.com/artificial-neural-networks-optimization-using-genetic-algorithm-with-python-1fe8ed17733e <br />
 https://medium.com/@Data_Aficionado_1083/genetic-algorithms-optimizing-success-through-evolutionary-computing-f4e7d452084f <br />
-https://www.comet.com/site/blog/train-neural-networks-using-a-genetic-algorithm-in-python-with-pygad/
+https://www.comet.com/site/blog/train-neural-networks-using-a-genetic-algorithm-in-python-with-pygad/ <br />
+https://blog.paperspace.com/train-keras-models-using-genetic-algorithm-with-pygad/
 
 ### About ANN
 https://www.kaggle.com/code/androbomb/simple-nn-with-python-multi-layer-perceptron <br />
