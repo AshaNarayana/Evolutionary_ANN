@@ -3,8 +3,28 @@ import numpy as np
 import pygad.gann
 import pygad.nn
 import pygad
+import tensorflow.keras # type: ignore
 
 
+def default_parameters_ga():
+    parameters_GA = {"num_generations": 50,
+                     "num_parents_mating": 4,
+                     "fitness_func": fitness_regression,
+                     "mutation_percent_genes": "default",
+                     "init_range_low": -4,
+                     "init_range_high": 4,
+                     "parent_selection_type": "sss",
+                     "crossover_type": "single_point",
+                     "mutation_type": "random",
+                     "keep_parents": -1,
+                     "on_generation": callback_generation_default}
+    return  parameters_GA
+
+
+
+"""
+Manual implementation
+"""
 
 def fitness_regression(gann, inputs, outputs):
     """
@@ -19,7 +39,6 @@ def fitness_regression(gann, inputs, outputs):
                                        data_inputs=inputs, problem_type="regression")
         return 1.0 / np.mean(np.abs(predictions - outputs))
     return fitness_func
-
 
 def callback_generation_default(gann, last_fitness):
     """
@@ -40,3 +59,24 @@ def callback_generation_default(gann, last_fitness):
         last_fitness.append(ga_instance.best_solution(pop_fitness=ga_instance.last_generation_fitness)[1].copy())
 
     return callback_generation
+
+
+
+"""
+Keras implementation
+"""
+
+def fitness_regression_keras(inputs, outputs, keras_ga, model):
+    def fitness_func(ga_instance, solution, sol_idx):
+        model_weights_matrix = pygad.kerasga.model_weights_as_matrix(model=model, weights_vector=solution)
+        model.set_weights(weights=model_weights_matrix)
+        predictions = model.predict(inputs)
+        mae = tensorflow.keras.losses.MeanAbsoluteError()
+        abs_error = mae(outputs, predictions).numpy() + 0.00000001
+        solution_fitness = 1.0 / abs_error
+        return solution_fitness
+    return fitness_func
+
+def callback_generation_keras(ga_instance):
+    print("Generation = {generation}".format(generation=ga_instance.generations_completed))
+    print("Fitness    = {fitness}".format(fitness=ga_instance.best_solution()[1]))
