@@ -30,9 +30,9 @@ class ANN_Genetic_keras:
         self.val_target = np.asarray(val_target, dtype=np.float32)
 
         # Keras model architecture
-        input_layer  = tensorflow.keras.layers.Input((x_train.shape[1],))
+        input_layer  = tensorflow.keras.layers.Input((train.shape[1],))
         dense_layer1 = tensorflow.keras.layers.Dense(5, activation="relu")(input_layer)
-        output_layer = tensorflow.keras.layers.Dense(1, activation="linear")(dense_layer1)
+        output_layer = tensorflow.keras.layers.Dense(target.shape[1], activation="linear")(dense_layer1)
 
         self.model = tensorflow.keras.Model(inputs=input_layer, outputs=output_layer)
         self.weights_vector = pygad.kerasga.model_weights_as_vector(model=self.model)

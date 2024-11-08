@@ -19,14 +19,14 @@ Creating a full method for training an ANN as an alternate method to backprop-ba
 
 ## Tasks:
 * Marina:
-  * Do ANN class with Evolution Strategies (check resources)
   * Write 1.Introduction + 4.Evolutionary Implementation
-  * Implement Metrics to compare implementations
+  * With the best ANN, test GA
+  * Write section 5.2
 
 * Asha:
-  * Turn syntheticData.py into a class -> Create datasets into datasets directory (.csv)
-  * Do ANN class (check resources)
   * Write 2.Synthetic Data + 4.ANN Implementation
+  * Experiments to get the best ANN
+  * Write section 5.1
 
 ## Resources 
 

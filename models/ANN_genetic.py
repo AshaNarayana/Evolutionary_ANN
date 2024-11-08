@@ -134,7 +134,7 @@ if __name__ == "__main__":
 
     # Training
     gann.fit()
-    #gann.ga_plots()
+    gann.ga_plots()
 
     # Testing
     predictions = gann.predict(x_test)
