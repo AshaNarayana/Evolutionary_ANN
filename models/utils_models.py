@@ -1,14 +1,16 @@
 
 import numpy as np
+import tensorflow.keras # type: ignore
+import pygad.kerasga
 import pygad.gann
 import pygad.nn
 import pygad
-import tensorflow.keras
+
 
 def default_parameters_ga():
-    parameters_GA = {"num_generations": 50,
+    parameters_GA = {"num_generations": 250,
                      "num_parents_mating": 4,
-                     "fitness_func": fitness_regression,
+                     "fitness_func": fitness_regression_keras,
                      "mutation_percent_genes": "default",
                      "init_range_low": -4,
                      "init_range_high": 4,
@@ -16,7 +18,7 @@ def default_parameters_ga():
                      "crossover_type": "single_point",
                      "mutation_type": "random",
                      "keep_parents": -1,
-                     "on_generation": callback_generation_default}
+                     "on_generation": callback_generation_keras}
     return  parameters_GA
 
 
@@ -66,13 +68,24 @@ Keras implementation
 """
 
 def fitness_regression_keras(inputs, outputs, keras_ga, model):
+    """
+
+    :param inputs:
+    :param outputs:
+    :param keras_ga:
+    :param model:
+    :return:
+    """
     def fitness_func(ga_instance, solution, sol_idx):
         model_weights_matrix = pygad.kerasga.model_weights_as_matrix(model=model, weights_vector=solution)
         model.set_weights(weights=model_weights_matrix)
+        #predictions = pygad.kerasga.predict(model=model,solution=solution,data=data_inputs)
         predictions = model.predict(inputs)
+
         mae = tensorflow.keras.losses.MeanAbsoluteError()
         abs_error = mae(outputs, predictions).numpy() + 0.00000001
         solution_fitness = 1.0 / abs_error
+
         return solution_fitness
     return fitness_func
 
