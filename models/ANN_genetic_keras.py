@@ -1,7 +1,9 @@
+
 import tensorflow.keras # type: ignore
 import pygad.kerasga
-import numpy as np
 import pygad
+
+import numpy as np
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
@@ -11,12 +13,15 @@ from utils_metrics import metrics_report_regression
 import warnings
 warnings.filterwarnings("ignore")
 
+
 class ANN_Genetic_keras:
     def __init__(self, train, target, val_train, val_target, arguments_GA, problem="regression"):
         """
 
         :param train:
         :param target:
+
+        WHEN TO USE VALIDATION SET?
         :param val_train:
         :param val_target:
         :param arguments_GANN:
@@ -29,19 +34,21 @@ class ANN_Genetic_keras:
         self.val_train = np.asarray(val_train, dtype=np.float32)
         self.val_target = np.asarray(val_target, dtype=np.float32)
 
-        # Keras model architecture
+        # Keras model architecture (TO BE CHANGED WITH BEST ARCHITECTURE)
         input_layer  = tensorflow.keras.layers.Input((train.shape[1],))
         dense_layer1 = tensorflow.keras.layers.Dense(5, activation="relu")(input_layer)
         output_layer = tensorflow.keras.layers.Dense(target.shape[1], activation="linear")(dense_layer1)
 
         self.model = tensorflow.keras.Model(inputs=input_layer, outputs=output_layer)
         self.weights_vector = pygad.kerasga.model_weights_as_vector(model=self.model)
-        self.keras_ga = pygad.kerasga.KerasGA(model=self.model, num_solutions=10)
+        self.keras_ga = pygad.kerasga.KerasGA(model=self.model, num_solutions=10) # Num solutions
         
         # Building a genetic algorithm
         self.ga = pygad.GA(num_generations = arguments_GA["num_generations"], # Number of generations.
                            num_parents_mating = arguments_GA["num_parents_mating"], # Number of solutions to be selected as parents.
+
                            initial_population = self.keras_ga.population_weights, # A user-defined initial population.
+
                            fitness_func = arguments_GA["fitness_func"](self.train, self.target, self.keras_ga, self.model), # Accepts a function/method and returns the fitness value(s) of the solution.
                            mutation_percent_genes=arguments_GA["mutation_percent_genes"], # Percentage of genes to mutate. It defaults to the string "default",  10%
                            init_range_low=arguments_GA["init_range_low"], # The lower value of the random range from which the gene values in the initial population are selected.
