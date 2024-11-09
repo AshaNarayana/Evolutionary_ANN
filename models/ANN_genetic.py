@@ -1,3 +1,5 @@
+import time
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -6,8 +8,9 @@ import pygad.nn
 import pygad
 
 from sklearn.model_selection import train_test_split
+
 from utils_models import fitness_regression, callback_generation_default
-from utils_metrics import metrics_report_regression
+from utils_metrics import metrics_report_regression, save_results_to_csv
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -133,14 +136,32 @@ if __name__ == "__main__":
     gann = ANN_Genetic(x_train, y_train, x_val, y_val, parameters_GANN, parameters_GA)
 
     # Training
+    start_train_time = time.time ()
     gann.fit()
     gann.ga_plots()
-
+    end_train_time = time.time ()
+    training_time = end_train_time - start_train_time
     # Testing
+    start_test_time = time.time ()
     predictions = gann.predict(x_test)
     predictions = np.asarray(predictions)
+    end_test_time = time.time ()
+
+    testing_time = end_test_time - start_test_time
 
     print(y_test.shape)
     print(predictions.shape)
-
-    print(metrics_report_regression(y_test, predictions))
+    mae, mse, max_err, r2 = metrics_report_regression (y_test, predictions)
+    results = []
+    print(mae, mse, max_err, r2)
+    results.append ({
+        "test_time": testing_time,
+        "training_time": training_time,
+        "mse": mse,
+        "mae": mae,
+        "max_error": max_err,
+        "r2": r2
+    })
+    DATA_SET_PATH = Path (__file__).parent.parent.joinpath ("datasets").resolve ()
+    results_file_path = DATA_SET_PATH.joinpath ("Ann_genetics_results.csv")
+    save_results_to_csv (results, results_file_path)

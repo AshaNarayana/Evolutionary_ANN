@@ -12,7 +12,7 @@ class SyntheticDataGenerator:
         self.num_samples = num_samples
         self.num_features = num_features
         self.noise_level = noise_level
-        self.datasets_directory = Path(__file__).parent.joinpath(datasets_dir).resolve()
+        self.datasets_directory = Path(__file__).parent.parent.joinpath(datasets_dir).resolve()
         self.datasets_directory.mkdir(exist_ok=True)
 
     def generate_data(self) -> Tuple[np.ndarray, np.ndarray]:
@@ -38,8 +38,8 @@ class SyntheticDataGenerator:
         # Scale target labels to the desired range
         scaler_y = MinMaxScaler (feature_range=target_range)
         y = scaler_y.fit_transform (y.reshape (-1, 1)).flatten ()
-        X = np.round (X, 1)
-        y = np.round (y, 1)
+        X = np.round (X, 8)
+        y = np.round (y, 8)
         return X, y
 
     def split_data(self, X: np.ndarray, y: np.ndarray, training_size: float = 0.5) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:

@@ -3,8 +3,7 @@ import numpy as np
 import pygad.gann
 import pygad.nn
 import pygad
-import tensorflow.keras # type: ignore
-
+import tensorflow.keras
 
 def default_parameters_ga():
     parameters_GA = {"num_generations": 50,
