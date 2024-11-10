@@ -97,8 +97,8 @@ class ANN_Genetic_keras:
 
     def ga_plots(self):
         self.ga.plot_fitness(title="PyGAD & Keras - Iteration vs. Fitness", linewidth=4)
-        self.ga.plot_genes()
-        self.ga.plot_new_solution_rate()
+        #self.ga.plot_genes()
+        #self.ga.plot_new_solution_rate()
 
         print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=self.solution_fitness))
         print("Index of the best solution : {solution_idx}".format(solution_idx=self.solution_idx))
