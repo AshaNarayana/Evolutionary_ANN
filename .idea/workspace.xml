@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ccd97668-4933-4faf-b5ce-c4714e7f5d27" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nara-On&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AshaNarayana/Evolutionary_ANN.git&quot;,
+    &quot;accountId&quot;: &quot;2ba82371-f1b2-49c6-8c8b-fce5fb6725b7&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2oDxmcEYCd7LlTso4sA5zBtGwfn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.ANN_derivative.executor": "Run",
+    "Python.ANN_evolutionary.executor": "Run",
+    "Python.ANN_evolutionary_keras.executor": "Run",
+    "Python.ANN_genetic (1).executor": "Run",
+    "Python.ANN_genetic.executor": "Run",
+    "Python.ANN_genetic_keras.executor": "Run",
+    "Python.analysis_ANN_genetic_keras.executor": "Run",
+    "Python.experiment_ANN_derivative.executor": "Run",
+    "Python.experiment_ANN_derivative_keras.executor": "Run",
+    "Python.generate_datasets.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.syntheticData.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/marin/Documents/Master/1r Semestre/Introduction to Machine Learning/Practicals IML/Work 2 IML/code",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\models" />
+      <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\experiments" />
+      <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\results" />
+      <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\datasets\tests" />
+      <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\datasets\results" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="ANN_genetic (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Evolutionary_ANN" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/models/ANN_genetic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="analysis_ANN_genetic_keras" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Evolutionary_ANN" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/analysis_ANN_genetic_keras.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="experiment_ANN_derivative" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Evolutionary_ANN" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/experiment_ANN_derivative.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="experiment_ANN_derivative_keras" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Evolutionary_ANN" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiments/experiment_ANN_derivative_keras.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Evolutionary_ANN" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.analysis_ANN_genetic_keras" />
+        <item itemvalue="Python.experiment_ANN_derivative_keras" />
+        <item itemvalue="Python.ANN_genetic (1)" />
+        <item itemvalue="Python.experiment_ANN_derivative" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccd97668-4933-4faf-b5ce-c4714e7f5d27" name="Changes" comment="" />
+      <created>1730418108331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730418108331</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Links added">
+      <option name="closed" value="true" />
+      <created>1730418798857</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730418798857</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Shaping Project">
+      <option name="closed" value="true" />
+      <created>1730421078442</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730421078442</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Task Distribution">
+      <option name="closed" value="true" />
+      <created>1730831146175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730831146175</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implementing Genetic Approach">
+      <option name="closed" value="true" />
+      <created>1730971072724</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730971072724</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Genetic NN">
+      <option name="closed" value="true" />
+      <created>1731022438242</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731022438242</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Genetic NN Updates">
+      <option name="closed" value="true" />
+      <created>1731059457884</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731059457884</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Tasks Distributed 2">
+      <option name="closed" value="true" />
+      <created>1731070716036</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731070716036</updated>
+    </task>
+    <task id="LOCAL-00008" summary="GA updates">
+      <option name="closed" value="true" />
+      <created>1731115165166</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731115165166</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Complete rework repository">
+      <option name="closed" value="true" />
+      <created>1731202526018</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731202526018</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Change main standvy">
+      <option name="closed" value="true" />
+      <created>1731202674885</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731202674885</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Small corrections">
+      <option name="closed" value="true" />
+      <created>1731228569623</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1731228569623</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Genetic parameters added">
+      <option name="closed" value="true" />
+      <created>1731236915457</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1731236915457</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Genetic keras experiment completed">
+      <option name="closed" value="true" />
+      <created>1731260473665</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731260473665</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Experiments completed">
+      <option name="closed" value="true" />
+      <created>1731261127648</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731261127648</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Analysis done">
+      <option name="closed" value="true" />
+      <created>1731263168067</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731263168067</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Corrections">
+      <option name="closed" value="true" />
+      <created>1731263282299</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1731263282299</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Comments and best in main">
+      <option name="closed" value="true" />
+      <created>1731264523590</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731264523590</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Links added" />
+    <MESSAGE value="Shaping Project" />
+    <MESSAGE value="Task Distribution" />
+    <MESSAGE value="Implementing Genetic Approach" />
+    <MESSAGE value="Genetic NN" />
+    <MESSAGE value="Genetic NN Updates" />
+    <MESSAGE value="Tasks Distributed 2" />
+    <MESSAGE value="GA updates" />
+    <MESSAGE value="Complete rework repository" />
+    <MESSAGE value="Change main standvy" />
+    <MESSAGE value="Small corrections" />
+    <MESSAGE value="Genetic parameters added" />
+    <MESSAGE value="Genetic keras experiment completed" />
+    <MESSAGE value="Experiments completed" />
+    <MESSAGE value="Analysis done" />
+    <MESSAGE value="Corrections" />
+    <MESSAGE value="Comments and best in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments and best in main" />
+  </component>
+</project>
