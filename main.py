@@ -22,10 +22,6 @@ if __name__ == '__main__':
     y_val = pd.read_csv(DATA_SET_PATH.joinpath("y_val.csv"))
 
 
-    print("Best ANN implementation")
-    # TO DO
-
-
     print("BEST GANN implementation")
 
     parameters_GA = default_parameters_ga_keras()
