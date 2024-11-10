@@ -59,6 +59,7 @@ class SyntheticDataGenerator:
 
         return X_train, X_val, X_test, y_train, y_val, y_test
 
+
     def save_to_csv(self, X_train: np.ndarray, X_val: np.ndarray, X_test: np.ndarray, y_train: np.ndarray, y_val: np.ndarray, y_test: np.ndarray):
         """
         Save datasets to CSV files.
@@ -77,10 +78,3 @@ class SyntheticDataGenerator:
         pd.DataFrame(y_val).to_csv(self.datasets_directory / 'y_val.csv', index=False)
         pd.DataFrame(X_test).to_csv(self.datasets_directory / 'X_test.csv', index=False)
         pd.DataFrame(y_test).to_csv(self.datasets_directory / 'y_test.csv', index=False)
-
-# Example usage
-if __name__ == "__main__":
-    generator = SyntheticDataGenerator(num_samples=2000, num_features=4, noise_level=10)
-    X, y = generator.generate_data()
-    X_train, X_val, X_test, y_train, y_val, y_test = generator.split_data(X, y, training_size=0.5)
-    generator.save_to_csv(X_train, X_val, X_test, y_train, y_val, y_test)

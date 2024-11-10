@@ -7,8 +7,10 @@ import numpy as np
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
+
+from models.utils_metrics import regression_report
 from utils_models import fitness_regression_keras, callback_generation_keras
-from utils_metrics import metrics_report_regression
+from utils_metrics import regression_report
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -63,7 +65,7 @@ class ANN_Genetic_keras:
         # Save parameters
         self.arguments_GA = arguments_GA
 
-        # Train results
+        # Train past_results
         self.solution = None
         self.solution_fitness = None
         self.solution_idx = None
@@ -134,4 +136,4 @@ if __name__ == "__main__":
     print(y_test.shape)
     print(predictions.shape)
 
-    print(metrics_report_regression(y_test, predictions))
+    print(regression_report(y_test, predictions))
