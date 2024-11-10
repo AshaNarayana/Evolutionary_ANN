@@ -21,14 +21,13 @@ warnings.filterwarnings("ignore")
 class ANN_Genetic_keras:
     def __init__(self, train, target, val_train, val_target, arguments_GA, problem="regression"):
         """
-
-        :param train:
-        :param target:
-        :param val_train:
-        :param val_target:
-        :param arguments_GANN:
-        :param arguments_GA:
-        :param problem:
+        Initialize neural networks + Keras model
+        :param train: Train dataset
+        :param target: Target values from training set
+        :param val_train: Validation dataset
+        :param val_target: Target values from validation set
+        :param arguments_GA: Dictionary with arguments
+        :param problem: Set as regression
         """
         # Prepare training data
         self.train = np.asarray(train, dtype=np.float32)
@@ -53,7 +52,7 @@ class ANN_Genetic_keras:
         self.ga = pygad.GA(num_generations = arguments_GA["num_generations"], # Number of generations.
                            num_parents_mating = arguments_GA["num_parents_mating"], # Number of solutions to be selected as parents.
 
-                           # Set initial population as 
+                           # Set initial population manually
                            initial_population = self.keras_ga.population_weights, # A user-defined initial population.
 
                            fitness_func = arguments_GA["fitness_func"](self.train, self.target, self.keras_ga, self.model), # Accepts a function/method and returns the fitness value(s) of the solution.
@@ -88,6 +87,11 @@ class ANN_Genetic_keras:
 
 
     def predict(self, test):
+        """
+        Make predictions
+        :param test: Testing data set
+        :return: Predictions
+        """
         return self.model.predict(test)
     
 

@@ -17,14 +17,14 @@ warnings.filterwarnings("ignore")
 class ANN_Genetic:
     def __init__(self, train, target, val_train, val_target, arguments_GANN, arguments_GA, problem="regression"):
         """
-
-        :param train:
-        :param target:
-        :param val_train:
-        :param val_target:
-        :param arguments_GANN:
-        :param arguments_GA:
-        :param problem:
+        Initialize neural networks + Keras model
+        :param train: Train dataset
+        :param target: Target values from training set
+        :param val_train: Validation dataset
+        :param val_target: Target values from validation set
+        :param arguments_GANN: Dictionary with arguments
+        :param arguments_GA: Dictionary with arguments
+        :param problem: Set as regression
         """
         # Prepare training data
         self.train = np.asarray(train, dtype=np.float32)
@@ -81,6 +81,11 @@ class ANN_Genetic:
         self.solution, self.solution_fitness, self.solution_idx = self.ga.best_solution(pop_fitness=self.ga.last_generation_fitness)
 
     def predict(self, test):
+        """
+        Make predictions
+        :param test: Testing data set
+        :return: Predictions
+        """
         return pygad.nn.predict(last_layer = self.gann.population_networks[self.solution_idx],
                                 data_inputs = np.asarray(test, dtype=np.float32),
                                 problem_type = self.problem)

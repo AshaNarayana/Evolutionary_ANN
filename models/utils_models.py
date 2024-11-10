@@ -43,13 +43,6 @@ Manual implementation
 """
 
 def fitness_regression(gann, inputs, outputs):
-    """
-
-    :param gann:
-    :param inputs:
-    :param outputs:
-    :return:
-    """
     def fitness_func(ga_instance, solution, sol_idx):
         predictions = pygad.nn.predict(last_layer=gann.population_networks[sol_idx],
                                        data_inputs=inputs, problem_type="regression")
@@ -57,12 +50,6 @@ def fitness_regression(gann, inputs, outputs):
     return fitness_func
 
 def callback_generation_default(gann, last_fitness):
-    """
-
-    :param gann:
-    :param last_fitness:
-    :return:
-    """
     def callback_generation(ga_instance):
         population_matrices = pygad.gann.population_as_matrices(population_networks=gann.population_networks,
                                                                 population_vectors=ga_instance.population)
@@ -83,14 +70,6 @@ Keras implementation
 """
 
 def fitness_regression_keras(inputs, outputs, keras_ga, model):
-    """
-
-    :param inputs:
-    :param outputs:
-    :param keras_ga:
-    :param model:
-    :return:
-    """
     def fitness_func(ga_instance, solution, sol_idx):
         model_weights_matrix = pygad.kerasga.model_weights_as_matrix(model=model, weights_vector=solution)
         model.set_weights(weights=model_weights_matrix)

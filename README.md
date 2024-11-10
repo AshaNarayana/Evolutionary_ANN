@@ -9,24 +9,12 @@ This project explores an alternate approach to training artificial neural networ
 - Marina Bermúdez Granados (marina.bermudez.granados@estudiantat.upc.edu) <br />
 - Asha Hosakote Narayana Swamy (asha.hosakote@estudiantat.upc.edu)
 
-
-## Exercise Summary
-
-Creating a full method for training an ANN as an alternate method to backprop-based techniques.
-
-<b>Requirements:</b>
-1. MLP or RBF network, one hidden layer
-2. Synthetic data
-3. One problem
-4. One kind of ANN
-5. One validation set
-
-<b>Goal:</b> Compare GA/Evo Strategies against derivative methods (or all three)
 ## Getting Started
 
 ### Running script for the first time
 These sections show how to create virtual environment for
 our script and how to install dependencies
+
 1. Open folder in terminal
   ```bash
   cd Evolutionary_ANN/
@@ -46,7 +34,7 @@ our script and how to install dependencies
   ```bash
   pip install -r requirements.txt
   ```
-you can check if dependencies were installed by running next
+You can check if dependencies were installed by running next
 command,it should print list with installed dependencies
   ```bash
   pip list
@@ -57,7 +45,7 @@ command,it should print list with installed dependencies
   deactivate
   ```
 
-#### Generate synthetic data
+### Generate synthetic data
 In data/synthetic_data_generator.py, we created a SyntheticDataGenerator class to generate synthetic regression data. We used make_regression for data creation, MinMaxScaler for scaling, and train_test_split for splitting into training, validation, and test sets. We have generated three different types of data: base dataset, larger dataset, and noisy dataset.
 To generate new synthetic data
 
@@ -84,16 +72,17 @@ To run the experiment file to generate test file run the following code:
    python3 experiment_ANN_derivative.py
    ```
 
-We will see the results file in `results/ANN_derivative/Ann_derivative_test.csv`.
+We will see the results file in `results/ANN_derivative/ann_derivative_test.csv`.
 
 Then, to find the analysis run the following code
    ```bash
-   python3 experiment_Ann_derivative_analyse.py
+   python3 analysis_ANN_derivative.py
    ```
 
 
 This will generate `results/ANN_derivative/best_ann_derivative_analyse.csv` and `results/ANN_derivative/worst_ann_derivative_analyse.csv`.
 Where we can see best and worst parameters for the ANN.
+
 
 #### 2 ANN derivative with Keras
 
@@ -106,30 +95,51 @@ To run the test file run the following code:
    python3 experiment_ANN_derivative_keras.py
    ```
 
-We will see the results file in `results/ANN_derivative_keras/Ann_derivative_keras_test.csv`.
+We will see the results file in `results/ANN_derivative_keras/ann_derivative_keras_test.csv`.
 
 Then, to run the analysis run the following code
    ```bash
-   python3 experiment_Ann_derivative_keras_analyse.py
+   python3 analysis_ANN_derivative_keras.py
    ```
 
 
 This will generate `results/ANN_derivative_keras/best_ann_derivative_keras_analyse.csv` and `results/ANN_derivative_keras/worst_ann_derivative_keras_analyse.csv`.
 Where we can see best and worst parameters for the ANN using Keras.
 
+
 #### 3 ANN Evolutionary Algorithm with GA
 
+Implementation is found at directory `models/ANN_genetic.py`.
+Experiments for execution and analysis phases are separated in files  `experiments/experiment_ANN_genetic_keras.py`.
 
-## Resources 
+To run the test file run the following code:
+   ```bash
+   cd ./experiments/experiment_ANN_genetic.py
+   python3 experiment_ANN_genetic.py
+   ```
 
-### About Evolutionary Algorithms + ANN
-https://towardsdatascience.com/artificial-neural-networks-optimization-using-genetic-algorithm-with-python-1fe8ed17733e <br />
-https://medium.com/@Data_Aficionado_1083/genetic-algorithms-optimizing-success-through-evolutionary-computing-f4e7d452084f <br />
-https://www.comet.com/site/blog/train-neural-networks-using-a-genetic-algorithm-in-python-with-pygad/ <br />
-https://blog.paperspace.com/train-keras-models-using-genetic-algorithm-with-pygad/ <br >
-https://www.kaggle.com/code/zzettrkalpakbal/genetic-algorithm-tutorial-of-pygad
+We will see the results file in `results/ANN_genetic/ann_genetic_test.csv`.
 
-### About ANN
-https://www.kaggle.com/code/androbomb/simple-nn-with-python-multi-layer-perceptron <br />
-https://medium.com/@reddyyashu20/ann-python-code-in-keras-and-pytorch-d98841639ba0 <br />
-https://www.analyticsvidhya.com/blog/2021/10/implementing-artificial-neural-networkclassification-in-python-from-scratch/
+
+#### 4 ANN Evolutionary Algorithm with GA
+
+Implementation is found at directory `models/ANN_genetic_keras.py`.
+Experiments for execution and analysis phases are separated in files  `experiments/experiment_ANN_genetic_keras.py` and `experiments/analysis_ANN_genetic_keras.py` respectively.
+
+To run the test file run the following code:
+   ```bash
+   cd ./experiments/experiment_ANN_genetic_keras.py
+   python3 experiment_ANN_genetic_keras.py
+   ```
+
+We will see the results file in `results/ANN_genetic_keras/ann_genetic_keras_test.csv`.
+
+Then, to run the analysis run the following code
+   ```bash
+   python3 analysis_ANN_genetic_keras.py
+   ```
+
+
+This will generate `results/ANN_genetic_keras/best_ann_genetic_keras_analyse.csv` and `results/ANN_genetic_keras/worst_ann_genetic_keras_analyse.csv`.
+Where we can see best and worst parameters for the ANN using Keras.
+
