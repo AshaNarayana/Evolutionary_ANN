@@ -8,7 +8,6 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 
-from models.utils_metrics import regression_report
 from utils_models import fitness_regression_keras, callback_generation_keras
 from utils_metrics import regression_report
 

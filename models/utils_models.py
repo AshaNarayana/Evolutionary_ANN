@@ -9,7 +9,22 @@ import pygad
 
 def default_parameters_ga():
     parameters_GA = {"num_generations": 250,
-                     "num_parents_mating": 4,
+                     "num_parents_mating": 5,
+                     "fitness_func": fitness_regression,
+                     "mutation_percent_genes": "default",
+                     "init_range_low": -4,
+                     "init_range_high": 4,
+                     "parent_selection_type": "sss",
+                     "crossover_type": "single_point",
+                     "mutation_type": "random",
+                     "keep_parents": -1,
+                     "on_generation": callback_generation_default }
+    return  parameters_GA
+
+
+def default_parameters_ga_keras():
+    parameters_GA = {"num_generations": 250,
+                     "num_parents_mating": 5,
                      "fitness_func": fitness_regression_keras,
                      "mutation_percent_genes": "default",
                      "init_range_low": -4,
