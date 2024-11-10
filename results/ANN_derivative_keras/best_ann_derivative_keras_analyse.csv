@@ -1,0 +1,2 @@
+Dataset,Learning Rate,Activation Function
+larger_dataset,0.04,relu
