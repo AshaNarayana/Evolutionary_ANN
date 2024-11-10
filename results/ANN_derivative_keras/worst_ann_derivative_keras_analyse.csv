@@ -1,0 +1,2 @@
+Dataset,Learning Rate,Activation Function
+noisy_dataset,0.03,sigmoid
