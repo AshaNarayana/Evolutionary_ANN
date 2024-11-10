@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccd97668-4933-4faf-b5ce-c4714e7f5d27" name="Changes" comment="" />
+    <list default="true" id="ccd97668-4933-4faf-b5ce-c4714e7f5d27" name="Changes" comment="Comments and best in main">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/analysis_ANN_genetic_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/analysis_ANN_genetic_keras.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +58,8 @@
     "Python.main.executor": "Run",
     "Python.syntheticData.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/marin/Documents/Master/1r Semestre/Introduction to Machine Learning/Practicals IML/Work 2 IML/code",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/marin/Documents/Master/1r Semestre/Computational Intelligence/Laboratory CI/EC Project/Evolutionary_ANN",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -71,7 +75,7 @@
       <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\datasets\results" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.analysis_ANN_genetic_keras">
     <configuration name="ANN_genetic (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Evolutionary_ANN" />
       <option name="ENV_FILES" value="" />
@@ -184,8 +188,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.analysis_ANN_genetic_keras" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.experiment_ANN_derivative_keras" />
         <item itemvalue="Python.ANN_genetic (1)" />
         <item itemvalue="Python.experiment_ANN_derivative" />
@@ -344,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731264523590</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Comments and best in main">
+      <option name="closed" value="true" />
+      <created>1731264751146</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731264751146</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="UnknownFeatures">

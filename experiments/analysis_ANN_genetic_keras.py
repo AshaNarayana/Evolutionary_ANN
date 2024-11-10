@@ -9,8 +9,8 @@ if __name__ == "__main__":
     file_path = RESULTS_DIRECTORY.joinpath('ANN_genetic_keras/ann_genetic_keras_test.csv')
 
     df = pd.read_csv(file_path, delimiter=',')
-    best_params_df = df.sort_values(by=["mae","f1-score", "max_error"], ascending = [True, False, True])
-    worst_params_df = df.sort_values(by=["mae","f1-score", "max_error"], ascending = [False, True, False])
+    best_params_df = df.sort_values(by=["max_error", "mae"], ascending = [True, True])
+    worst_params_df = df.sort_values(by=["max_error", "mae"], ascending = [False, False])
 
     print("All results:")
     print(df)
