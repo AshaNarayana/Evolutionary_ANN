@@ -1,7 +1,13 @@
-# Evolutionary_ANN
+# CI - Training Neural Networks with Evolutionary Algorithms
 
-Marina Bermúdez Granados (marina.bermudez.granados@estudiantat.upc.edu) <br />
-Asha Hosakote Narayana Swamy (asha.hosakote@estudiantat.upc.edu)
+## Introduction
+Project Overview
+This project explores an alternate approach to training artificial neural networks (ANNs) without using traditional backpropagation. The goal is to implement a method for optimizing ANNs using Genetic Algorithms, Evolution Strategies, and derivative-based techniques. By comparing these methods, we can understand their relative advantages, such as handling non-continuous and noisy error functions, and analyze their performance in terms of execution time, error rate, and model size. This approach also emphasizes examining the impact of architectural features like neuron count and weight limits on the overall performance and generalization of the ANN.
+
+## Team
+
+- Marina Bermúdez Granados (marina.bermudez.granados@estudiantat.upc.edu) <br />
+- Asha Hosakote Narayana Swamy (asha.hosakote@estudiantat.upc.edu)
 
 
 ## Exercise Summary
@@ -16,17 +22,87 @@ Creating a full method for training an ANN as an alternate method to backprop-ba
 5. One validation set
 
 <b>Goal:</b> Compare GA/Evo Strategies against derivative methods (or all three)
+## Getting Started
 
-## Tasks:
-* Marina:
-  * Write 1.Introduction + 4.Evolutionary Implementation
-  * With the best ANN, test GA (almost ready)
-  * Write section 5.2
+### Running script for the first time
+These sections show how to create virtual environment for
+our script and how to install dependencies
+1. Open folder in terminal
+  ```bash
+  cd Evolutionary_ANN/
+  ```
 
-* Asha:
-  * Write 2.Synthetic Data + 4.ANN Implementation
-  * Experiments to get the best ANN: Check the documentation or ask for any question!
-  * Write section 5.1
+2. Create virtual env
+  ```bash
+  python3 -m venv venv/
+  ```
+
+3. Open virtual env
+  ```bash
+  source venv/bin/activate
+  ```
+
+4. Install required dependencies
+  ```bash
+  pip install -r requirements.txt
+  ```
+you can check if dependencies were installed by running next
+command,it should print list with installed dependencies
+  ```bash
+  pip list
+  ```
+
+5. Close virtual env
+  ```bash
+  deactivate
+  ```
+All tests can be found at the directory `src/supervised_ml/experiments`. We indicate how to run each experiment (we assume that the virtual environment is set to run any python code from here.)
+
+#### 1 ANN derivative without Keras
+Implementation is found at directory `models/ANN_derivative.py`.
+Experiments for execution and analysis phases are separated in files `experiments/experiment_ANN_derivative.py` and `experiments/Ann_derivative_analyse.py` respectively.
+
+To run the experiment file to generate test file run the following code:
+   ```bash
+   cd ./experiments/experiment_ANN_derivative.py
+   python3 experiment_ANN_derivative.py
+   ```
+
+We will see the results file in `results/ANN_derivative/Ann_derivative_test.csv`.
+
+Then, to find the analysis run the following code
+   ```bash
+   python3 experiment_Ann_derivative_analyse.py
+   ```
+
+
+This will generate `results/ANN_derivative/best_ann_derivative_analyse.csv` and `results/ANN_derivative/worst_ann_derivative_analyse.csv`.
+Where we can see best and worst parameters for the ANN.
+
+#### 2 ANN derivative with Keras
+
+Implementation is found at directory `models/ANN_derivative_keras.py`.
+Experiments for execution and analysis phases are separated in files  `experiments/experiment_ANN_derivative_keras.py` and `experiments/experiment_Ann_derivative_keras_analyse.py` respectively.
+
+To run the test file run the following code:
+   ```bash
+   cd ./experiments/experiment_ANN_derivative_keras.py
+   python3 experiment_ANN_derivative_keras.py
+   ```
+
+We will see the results file in `results/ANN_derivative_keras/Ann_derivative_keras_test.csv`.
+
+Then, to run the analysis run the following code
+   ```bash
+   python3 experiment_Ann_derivative_keras_analyse.py
+   ```
+
+
+This will generate `results/ANN_derivative_keras/best_ann_derivative_keras_analyse.csv` and `results/ANN_derivative_keras/worst_ann_derivative_keras_analyse.csv`.
+Where we can see best and worst parameters for the ANN using Keras.
+
+#### 3 ANN Evolutionary Algorithm with GA
+
 
 ## Resources 
 
