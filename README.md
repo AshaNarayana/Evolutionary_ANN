@@ -64,7 +64,7 @@ All tests can be found at the directory `src/supervised_ml/experiments`. We indi
 
 #### 1 ANN derivative without Keras
 Implementation is found at directory `models/ANN_derivative.py`.
-Experiments for execution and analysis phases are separated in files `experiments/experiment_ANN_derivative.py` and `experiments/Ann_derivative_analyse.py` respectively.
+Experiments for execution and analysis phases are separated in files `experiments/experiment_ANN_derivative.py` and `experiments/analysis_ANN_derivative.py` respectively.
 
 To run the experiment file to generate test file run the following code:
    ```bash
@@ -87,7 +87,7 @@ Where we can see best and worst parameters for the ANN.
 #### 2 ANN derivative with Keras
 
 Implementation is found at directory `models/ANN_derivative_keras.py`.
-Experiments for execution and analysis phases are separated in files  `experiments/experiment_ANN_derivative_keras.py` and `experiments/experiment_Ann_derivative_keras_analyse.py` respectively.
+Experiments for execution and analysis phases are separated in files  `experiments/experiment_ANN_derivative_keras.py` and `experiments/analysis_ANN_derivative_keras.py` respectively.
 
 To run the test file run the following code:
    ```bash
