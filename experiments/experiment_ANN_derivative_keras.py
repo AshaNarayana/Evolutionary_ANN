@@ -93,7 +93,7 @@ if __name__ == "__main__":
     np.set_printoptions(suppress=True)
 
     result_df = ann_keras_parameter_test(True, True)
-    output_file_name = "Ann_derivative_keras_test.csv"
+    output_file_name = "ann_derivative_keras_test.csv"
 
     # Modification for Windows users
     output_file_name = output_file_name.replace(":", "-")
