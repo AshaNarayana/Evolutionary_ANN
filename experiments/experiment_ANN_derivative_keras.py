@@ -1,4 +1,3 @@
-
 from datetime import datetime
 from pathlib import Path
 import time
@@ -9,8 +8,9 @@ from pandas import DataFrame
 
 import numpy as np
 
-from models.utils_metrics import metrics_regression
+
 from models.ANN_derivative_keras import ANN_Keras
+from models.utils_metrics import metrics_regression
 
 
 # Test implementation using three datasets
@@ -35,10 +35,9 @@ def ann_keras_parameter_test(verbose: bool = False, test: bool = False) -> DataF
         y_val = pd.read_csv(dataset_paths.joinpath("y_val.csv"))
         datasets.append([dataset_paths, x_train, y_train, x_test, y_test, x_val, y_val])
 
-    ############# ANN PARAMETERS to test ¿? ###################
+
     learning_rate_range = np.arange(0.01, 0.05, 0.01)
-    activation_functions = ["relu", "sigmoid"]
-    ###########################################################
+    activation_functions_hidden = ["relu", "sigmoid"]
 
     # EMPTY RESULTS DSs
     column_names = ["dataset", "learning_rate", "activation_function",
@@ -46,20 +45,16 @@ def ann_keras_parameter_test(verbose: bool = False, test: bool = False) -> DataF
     results_df = pd.DataFrame(columns=column_names)
 
     # ITERATE
-    max_iterations = (len(datasets) *
-    ################### Will change depending on the tests ###########################
-                      len(learning_rate_range) * len(activation_functions))
-    ##################################################################################
+    max_iterations = (len(datasets) * len(learning_rate_range) * len(activation_functions_hidden))
     iteration = 1
 
     for path, x_train, y_train, x_test, y_test, x_val, y_val in datasets:
         for learning_rate in learning_rate_range:
-            for activation in activation_functions:
+            for activation in activation_functions_hidden:
                 print(f"{iteration} of {max_iterations} iterations")
 
-                ################ What parameters are you testing ¿? ################
-                ann_keras = ANN_Keras(x_train, y_train, x_val, y_val)
-                ####################################################################
+                ann_keras = ANN_Keras(x_train, y_train, x_val, y_val,
+                                      learning_rate=learning_rate, activation_hidden=activation)
 
                 # Training
                 training_time_start = time.time()
@@ -79,10 +74,8 @@ def ann_keras_parameter_test(verbose: bool = False, test: bool = False) -> DataF
                 # Save
                 new_row_as_df = pd.Series({
                     "dataset": os.path.basename(path),
-                    ############### Parameters to test ¿? ############
                     "learning_rate": learning_rate,
                     "activation_function": activation,
-                    ##################################################
                     "mae": mae,
                     "mse": mse,
                     "max_error": max_error,

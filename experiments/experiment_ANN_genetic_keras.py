@@ -41,11 +41,11 @@ def gann_keras_parameter_test(verbose: bool = False, test: bool = False) -> Data
         mutation = ["random"]
         keep_parents = [-1]
     else:
-        mutation_percentages = ["default", 0.25]
-        parent_selection = ["sss", "sus", "rank", "tournament"]
+        mutation_percentages = ["default"]
+        parent_selection = ["sss", "sus", "tournament"]
         crossover = ["single_point", "uniform"]
         mutation = ["random", "scramble"]
-        keep_parents = [-1, 0] # All or none
+        keep_parents = [-1] # All
 
 
     # EMPTY RESULTS DSs
@@ -115,7 +115,7 @@ def gann_keras_parameter_test(verbose: bool = False, test: bool = False) -> Data
 
 
 if __name__ == "__main__":
-    result_df = gann_keras_parameter_test(True, True)
+    result_df = gann_keras_parameter_test(True, False)
     output_file_name = f"{datetime.now()}.csv"
 
     # Modification for Windows users

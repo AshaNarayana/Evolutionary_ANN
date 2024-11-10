@@ -1,22 +1,27 @@
-import time
+
 from pathlib import Path
 import pandas as pd
-from sklearn.model_selection import train_test_split
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.metrics import MeanSquaredError, MeanAbsoluteError
-from models.utils_metrics import regression_report, save_results_to_csv
+
+from utils_metrics import regression_report, save_results_to_csv
 
 
 class ANN_Keras:
-    def __init__(self, train_data, train_outputs, valid_data, valid_outputs):
+    def __init__(self, train_data, train_outputs, valid_data, valid_outputs,
+                 activation_hidden="relu", activation_output="linear", learning_rate=0.01):
         """
 
         :param train_data:
         :param train_outputs:
         :param valid_data:
         :param valid_outputs:
+        :param activation_hidden:
+        :param activation_output:
+        :param learning_rate:
         """
         self.train_data = train_data
         self.train_outputs = train_outputs
@@ -25,15 +30,13 @@ class ANN_Keras:
 
         # Architecture
         self.model = Sequential()
-        self.model.add(Dense(150, input_dim=self.train_data.shape[1], activation='relu'))  # Hidden layer with 150 neurons
-        self.model.add(Dense(1))  # Output layer for regression
+        self.model.add(Dense(150, input_dim=self.train_data.shape[1], activation=activation_hidden))  # Hidden layer with 150 neurons
+        self.model.add(Dense(train_outputs.shape[1], activation=activation_output))
 
         # Compile the model
-        self.model.compile(
-            optimizer=Adam(learning_rate=0.01),
-            loss='mean_squared_error',
-            metrics=[MeanSquaredError(), MeanAbsoluteError()]
-        )
+        self.model.compile( optimizer=Adam(learning_rate=learning_rate),
+                            loss='mean_squared_error',
+                            metrics=[MeanSquaredError(), MeanAbsoluteError()] )
 
         # Other parameters
         self.history = None

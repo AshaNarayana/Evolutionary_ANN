@@ -1,2 +1,2 @@
 Dataset,Learning Rate,Activation Function
-larger_dataset,0.04,relu
+larger_dataset,0.01,sigmoid
