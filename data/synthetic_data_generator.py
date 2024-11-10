@@ -42,7 +42,7 @@ class SyntheticDataGenerator:
         y = np.round (y, 8)
         return X, y
 
-    def split_data(self, X: np.ndarray, y: np.ndarray, training_size: float = 0.5) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    def split_data(self, X: np.ndarray, y: np.ndarray, training_size: float = 0.7) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         """
         Split data into training, validation, and testing sets.
 
@@ -51,11 +51,11 @@ class SyntheticDataGenerator:
         :param training_size: Proportion of data to use for training.
         :return: Split data arrays for training, validation, and testing.
         """
-        # Initial split to get a large test set (e.g., 30% of total data)
-        X_temp, X_test, y_temp, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+        # Split the training set into training and validation with variable training set size
+        X_train, X_val, y_train, y_val = train_test_split(X, y, train_size=training_size, random_state=42)
 
-        # Split the temp set into training and validation with variable training set size
-        X_train, X_val, y_train, y_val = train_test_split(X_temp, y_temp, train_size=training_size, random_state=42)
+        # Split validation and test sets by half
+        X_val, X_test, y_val, y_test = train_test_split(X_val, y_val, train_size=0.5, random_state=42)
 
         return X_train, X_val, X_test, y_train, y_val, y_test
 
