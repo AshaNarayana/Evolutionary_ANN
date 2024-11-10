@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccd97668-4933-4faf-b5ce-c4714e7f5d27" name="Changes" comment="Comments and best in main">
+    <list default="true" id="ccd97668-4933-4faf-b5ce-c4714e7f5d27" name="Changes" comment="Genetic done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiments/analysis_ANN_genetic_keras.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/analysis_ANN_genetic_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.ANN_derivative.executor": "Run",
-    "Python.ANN_evolutionary.executor": "Run",
-    "Python.ANN_evolutionary_keras.executor": "Run",
-    "Python.ANN_genetic (1).executor": "Run",
-    "Python.ANN_genetic.executor": "Run",
-    "Python.ANN_genetic_keras.executor": "Run",
-    "Python.analysis_ANN_genetic_keras.executor": "Run",
-    "Python.experiment_ANN_derivative.executor": "Run",
-    "Python.experiment_ANN_derivative_keras.executor": "Run",
-    "Python.generate_datasets.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.syntheticData.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/marin/Documents/Master/1r Semestre/Computational Intelligence/Laboratory CI/EC Project/Evolutionary_ANN",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.ANN_derivative.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ANN_evolutionary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ANN_evolutionary_keras.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ANN_genetic (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.ANN_genetic.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ANN_genetic_keras.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis_ANN_genetic_keras.executor&quot;: &quot;Run&quot;,
+    &quot;Python.experiment_ANN_derivative.executor&quot;: &quot;Run&quot;,
+    &quot;Python.experiment_ANN_derivative_keras.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_datasets.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.syntheticData.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marin/Documents/Master/1r Semestre/Computational Intelligence/Laboratory CI/EC Project/Evolutionary_ANN&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\marin\Documents\Master\1r Semestre\Computational Intelligence\Laboratory CI\EC Project\Evolutionary_ANN\models" />
@@ -356,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731264751146</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Genetic done">
+      <option name="closed" value="true" />
+      <created>1731267691633</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731267691633</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -391,6 +399,7 @@
     <MESSAGE value="Analysis done" />
     <MESSAGE value="Corrections" />
     <MESSAGE value="Comments and best in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments and best in main" />
+    <MESSAGE value="Genetic done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Genetic done" />
   </component>
 </project>

@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     parameters_GA = default_parameters_ga_keras()
     parameters_GA["parent_selection_type"] = "sus"
-    parameters_GA["crossover_type"] = "uniform"
+    parameters_GA["crossover_type"] = "single_point"
     parameters_GA["mutation_type"] = "random"
     parameters_GA["keep_parents"] = -1
 
