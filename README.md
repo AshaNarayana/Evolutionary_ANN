@@ -56,6 +56,22 @@ command,it should print list with installed dependencies
   ```bash
   deactivate
   ```
+
+#### Generate synthetic data
+In data/synthetic_data_generator.py, we created a SyntheticDataGenerator class to generate synthetic regression data. We used make_regression for data creation, MinMaxScaler for scaling, and train_test_split for splitting into training, validation, and test sets. We have generated three different types of data: base dataset, larger dataset, and noisy dataset.
+To generate new synthetic data
+
+   ```bash
+   cd ./data/generate_datasets.py
+   python3 generate_datasets.py
+   ```
+
+This will generate data under directory `data/synthetic_data/` with the following files:
+- `base_dataset.csv`
+- `larger_dataset.csv`
+- `noisy_dataset.csv`
+
+### Running the tests
 All tests can be found at the directory `src/supervised_ml/experiments`. We indicate how to run each experiment (we assume that the virtual environment is set to run any python code from here.)
 
 #### 1 ANN derivative without Keras
